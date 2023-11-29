@@ -5,7 +5,7 @@ import seaborn as sns
 import plotly.express as px
 import numpy as np
 import requests
-from openpyxl import Workbook
+import openpyxl
 from pandas import json_normalize
 from streamlit_extras.add_vertical_space import add_vertical_space
 from streamlit_lottie import st_lottie
