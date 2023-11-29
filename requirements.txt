@@ -7,3 +7,4 @@ requests==2.31.0
 numpy==1.23.3
 streamlit-extras==0.3.5
 streamlit-lottie==0.0.5
+libtk8.6
