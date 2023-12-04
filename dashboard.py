@@ -31,15 +31,15 @@ df = df.iloc[:-5]
 data = df.pivot(index='Country Name', columns='Series Name', values='2019 [YR2019]')
 data.reset_index(inplace=True)
 
-column_names = ['country', 'CO2 Emission', 'Health Expenditure', 'GDP', 'Immunization DPT', 'Immunization HepB3', 'Immunization Measles', 'Life Expectancy', 'Infant Death', 'Maternal Death', 'Primary Education']
+column_names = ['Country', 'CO2 Emission', 'Health Expenditure', 'GDP', 'Immunization DPT', 'Immunization HepB3', 'Immunization Measles', 'Life Expectancy', 'Infant Death', 'Maternal Death', 'Primary Education']
 data.columns = column_names
 
-data["country"] = data["country"].str.replace(',', '')
+data["Country"] = data["Country"].str.replace(',', '')
 data = data.replace(["..", "..."], np.nan)
 data.dropna(inplace=True)
 
 population = pd.read_excel("population.xlsx")
-data = pd.merge(data, population, on='country')
+data = pd.merge(data, population, on='Country')
 
 row0_spacer1, row0_1, row0_spacer2, row0_2, row0_spacer3 = st.columns(
     (0.1, 2, 0.2, 1, 0.1)
