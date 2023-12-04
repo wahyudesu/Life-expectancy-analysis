@@ -123,7 +123,7 @@ with row3_1:
         )
 
 with row3_2:
-    st.subheader("Scatter Plot: Gross Domestic Product vs Life Expectancy")
+    st.subheader("Scatter Plot: Immunization HepB3 vs Life Expectancy")
     scatter_fig2 = px.scatter(data, x="Immunization HepB3", y="Life Expectancy",
                              size="population", hover_name="country", log_x=True, size_max=50)
 
